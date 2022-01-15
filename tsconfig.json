@@ -1,8 +1,4 @@
 {
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-  },
   "compilerOptions": {
     "lib": ["es2021"],
     "module": "ES2020",
