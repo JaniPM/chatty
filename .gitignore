@@ -60,9 +60,11 @@ typings/
 # next.js build output
 .next
 
+# Dist
+dist
+
 # Local mongo db data
 mongo-data
 
 # Local elastic search data
 elasticsearch-data
-
