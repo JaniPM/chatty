@@ -8,7 +8,7 @@
     "clean": "rm -rf dist",
     "dev": "NODE_ENV=development LOG_LEVEL=debug npm run clean && nodemon",
     "dev:build": "tsc --incremental",
-    "dev:start": "node dist/index.js",
+    "dev:start": "node dist/app.js",
     "lint": "tsc --noEmit && eslint ./src --ext .ts",
     "test": "jest"
   },
