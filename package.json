@@ -6,9 +6,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist",
-    "dev": "NODE_ENV=development LOG_LEVEL=debug npm run clean && nodemon",
-    "dev:build": "tsc --incremental",
-    "dev:start": "node dist/server.js",
+    "dev": "npm run clean && nodemon",
     "start": "NODE_ENV=production node dist/server.js",
     "lint": "tsc --noEmit && eslint ./src --ext .ts",
     "test": "jest"
@@ -25,6 +23,7 @@
     "pino-pretty": "^9.1.0",
     "prettier": "^2.7.1",
     "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "dependencies": {
