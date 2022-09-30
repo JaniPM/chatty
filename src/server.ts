@@ -1,12 +1,21 @@
 import app from './app';
 
-// TODO: log level and pretty print is now for development.
-// Should configure based on the NODE_ENVIRONMENT.
+const isProduction = process.env.NODE_ENV === 'production';
+
+const logger = isProduction
+  ? true
+  : {
+      transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: 'HH:MM:ss Z',
+          ignore: 'pid,hostname',
+        },
+      },
+    };
+
 const server = app({
-  logger: {
-    level: 'debug',
-    prettyPrint: true,
-  },
+  logger,
 });
 
 server.listen(3000, err => {
