@@ -1,9 +1,10 @@
-import fastify from 'fastify';
+import Fastify from 'fastify';
+import routes from './routes';
 
-export default function init(opts = {}) {
-  const app = fastify(opts);
-
-  app.get('/ping', async () => 'pong');
-
+function init(opts = {}) {
+  const app = Fastify(opts);
+  app.register(routes);
   return app;
 }
+
+export default init;

@@ -17,8 +17,7 @@ const logger = isProduction
 const server = app({
   logger,
 });
-
-server.listen(3000, err => {
+server.listen({ port: 3000 }, err => {
   if (err) {
     server.log.error(err);
     process.exit(1);
