@@ -2,7 +2,7 @@
 
 ## Getting started
 
-- `npm run build` builds everything into ./dist folder
+- `npm run build` builds everything into `./dist` folder
 - `npm run dev` starts server in dev and watch mode => restarts on code changes
 - `npm run test` runs all tests
 
@@ -10,8 +10,8 @@
 
 ### Build - tsconfig.json
 
-- CommonJS is used for module-option cause Jest and some other libs don't play yet well together with ES2020/ESNext
-- Build excludes spec files `"./src/**/*.spec.ts"`. Otherwise jest would run tests twice, once for ts files and once for transpiled js files. Besides we don't want test files included to `./dist`
+- CommonJS is used for module-option => Jest and some other libs don't play yet well together with ES2020/ESNext.
+- Build excludes spec files `"./src/**/*.spec.ts"`. Otherwise, jest would run tests twice, once for ts files and once for transpiled js files. Besides we don't want test files included to `./dist`
 
 ### Test
 
