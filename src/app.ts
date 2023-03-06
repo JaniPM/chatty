@@ -17,6 +17,11 @@ app.use('/api/v1/', router);
 
 // Start the server
 const port = 3000;
-app.listen(port, () => {
-  logger.info(`Server is running at http://localhost:${port}`);
-});
+
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    logger.info(`Server is running at http://localhost:${port}`);
+  });
+}
+
+export default app;
