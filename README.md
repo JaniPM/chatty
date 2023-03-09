@@ -20,4 +20,4 @@ Nodemon is used together with ts-node. See `nodemon.json` configuration relating
 ### Test
 
 - ts-jest is used with jest in order to support TypeScript. ts-jest is added as a preset in jest.config.js
-- Api/integration testing uses fastify's inject method instead of supertest: https://www.fastify.io/docs/latest/Guides/Testing/
+- Api/integration testing uses supertest: https://github.com/ladjs/supertest.

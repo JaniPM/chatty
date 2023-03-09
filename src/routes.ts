@@ -1,8 +1,11 @@
-import { FastifyInstance } from 'fastify';
+import express, { Request, Response } from 'express';
+import channelRoutes from './channels/routes';
 
-async function routes(fastify: FastifyInstance) {
-  fastify.get('/', async () => ({ hello: 'world' }));
-  fastify.get('/ping', async () => 'pong');
-}
+// Setup routes. Each modules sets up their own child routes.
+const router = express.Router();
+router.get('/', (_req: Request, res: Response) =>
+  res.send('Server running...'),
+);
+router.use('/channels', channelRoutes);
 
-export default routes;
+export default router;
